@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Organizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Welcome Section -->
+  <section id="welcome-section">
+    <h2>Welcome to Recipe Organizer</h2>
+    <p>
+      Organize your recipes easily! Add, categorize, mark favorites, and filter by ingredient or meal type.
+      Discover a simple and intuitive way to manage your culinary ideas.
+    </p>
+    <button id="get-started-btn">Get Started</button>
+  </section>
+  
+  <!-- Login Section -->
+  <section id="login-section" class="hidden">
+    <h2>Login</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" required>
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+  </section>
+  
+  <!-- Register Section -->
+  <section id="register-section" class="hidden">
+    <h2>Register</h2>
+    <form id="register-form">
+      <div class="form-group">
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" required>
+      </div>
+      <div class="form-group">
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" required>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+  </section>
+  
+  <!-- Main App Container (shown when user is authenticated) -->
+  <div id="app-container" class="hidden">
+    <!-- Header with Navigation -->
+    <header>
+      <nav>
+        <h1>Recipe Organizer</h1>
+        <ul>
+          <li><a href="#" id="home-link">Home</a></li>
+          <li><a href="#" id="favorites-link">Favorites</a></li>
+          <li><a href="#" id="settings-link">Settings</a></li>
+          <li><button id="logout-btn">Logout</button></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Home Section: List of Recipes -->
+      <section id="home-section" aria-label="Recipe List">
+        <div class="search-filter">
+          <input type="text" id="search-input" placeholder="Search recipe..." aria-label="Search recipe">
+          <select id="filter-select" aria-label="Filter recipes">
+            <option value="">All</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snack</option>
+          </select>
+          <button id="add-recipe-btn" aria-label="Add recipe">Add Recipe</button>
+        </div>
+        <div id="recipe-list">
+          <!-- Recipe cards will be dynamically generated here -->
+        </div>
+        <div id="pagination">
+          <!-- Pagination controls (if needed) -->
+        </div>
+      </section>
+      
+      <!-- Add/Edit Recipe Section (Hidden by default) -->
+      <section id="form-section" class="hidden" aria-label="Add or Edit Recipe">
+        <button id="back-btn" aria-label="Back to list">&larr; Back</button>
+        <form id="recipe-form">
+          <div class="form-group">
+            <label for="recipe-title">Recipe Title:</label>
+            <input type="text" id="recipe-title" name="recipe-title" required>
+          </div>
+          <div class="form-group">
+            <label for="recipe-ingredients">Ingredients:</label>
+            <textarea id="recipe-ingredients" name="recipe-ingredients" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="recipe-type">Meal Type:</label>
+            <select id="recipe-type" name="recipe-type" required>
+              <option value="">Select type</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="snack">Snack</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="favorite-check">
+              <input type="checkbox" id="favorite-check" name="favorite-check">
+              Mark as Favorite
+            </label>
+          </div>
+          <button type="submit" id="save-btn">Save</button>
+        </form>
+      </section>
+      
+      <!-- Favorites Section (Hidden by default) -->
+      <section id="favorites-section" class="hidden" aria-label="Favorite Recipes">
+        <button id="back-fav-btn" aria-label="Back to list">&larr; Back</button>
+        <div id="favorite-list">
+          <!-- Favorite recipes will be dynamically generated here -->
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script type="module" src="script.js"></script>
+  <iframe height="430" width="350" src="https://bot.dialogflow.com/4955709b-7281-4cfe-8426-09c6ffa0d564"></iframe>S
+</body>
+</html>
+

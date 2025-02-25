@@ -1,0 +1,25 @@
+{
+  "name": "recipe-organizer",
+  "version": "1.0.0",
+  "description": "web app intended to categorize recipes, mark favorites, and filter by ingredient or meal type",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rammVys/recipe-organizer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rammVys/recipe-organizer/issues"
+  },
+  "homepage": "https://github.com/rammVys/recipe-organizer#readme",
+  "devDependencies": {
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
